@@ -17,9 +17,8 @@ browser.find_element_by_css_selector('[name="search"]').send_keys(search_request
 browser.find_element_by_css_selector('[name="search"]').send_keys(Keys.ENTER)
 browser.implicitly_wait(10)
 
-elements = browser.find_elements_by_css_selector('[class="result-title"]')
+actualResult = browser.find_element_by_css_selector('[class="result-title"]').text
 
-actualResult = elements[0].text
 
 expectedResult = "Результаты поиска: ноутбук"
 
